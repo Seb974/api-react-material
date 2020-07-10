@@ -2,12 +2,25 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UserRepository;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @UniqueEntity("email", message="Un utilisateur possédant cette adresse email existe déjà")
+ * @ApiResource(
+ *      attributes={
+ *          "order": {"email":"asc"}
+ *      },
+ *      normalizationContext={
+ *          "groups"={"users_read"}
+ *      }
+ * )
  */
 class User implements UserInterface
 {
@@ -15,11 +28,15 @@ class User implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"users_read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Groups({"users_read"})
+     * @Assert\NotBlank(message="L'adresse email est obligatoire")
+     * @Assert\Email(message="Le format de l'adresse email doit être valide")
      */
     private $email;
 
@@ -31,6 +48,8 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Un mot de passe est obligatoire")
+     * @Assert\Length(min=3, max=20, maxMessage="Le mot de passe doit faire entre 3 et 20 caractères", minMessage="Le mot de passe doit faire entre 3 et 20 caractères")
      */
     private $password;
 
