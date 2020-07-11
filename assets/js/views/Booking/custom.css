@@ -1,0 +1,191 @@
+.landingpage-container {
+    z-index: 12;
+    color: #FFFFFF;
+    /* ...container; */
+}
+.landingpage-title {
+    /* ...title, */
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+    min-height: 32px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.landingpage-subtitle {
+    font-size: 1.313rem;
+    max-width: 500px;
+    margin: 10px auto 0;
+}
+.landingpage-main {
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+}
+.landingpage-mainRaised {
+    margin: -60px 30px 0px;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.productSection-section {
+    padding: 70px 0;
+    text-align: center;
+  }
+.productSection-title {
+    /* ...title, */
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    min-height: 32px;
+    text-decoration: none;
+}
+.productSection-description {
+    color: #999;
+}
+.teamSection-section {
+    padding: 70px 0;
+    text-align: center;
+}
+.teamSection-title {
+    /* ...title, */
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    min-height: 32px;
+    text-decoration: none;
+}
+  /* ...imagesStyle, */
+.teamSection-itemGrid {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* cardTitle, */
+.teamSection-smallTitle {
+    color: #6c757d;
+}
+.teamSection-description {
+    color: #999;
+}
+.teamSection-justifyCenter {
+    justify-content: center !important;
+}
+.teamSection-socials {
+    margin-top: 0;
+    width: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    line-height: 41px;
+    font-size: 20px;
+    color: #999;
+}
+.teamSection-margin5 {
+    margin: 5px;
+}
+
+.workSection-section {
+    padding: 70px 0;
+}
+.workSection-title {
+    /* ...title, */
+    margin-bottom: 50px;
+    margin-top: 30px;
+    min-height: 32px;
+    text-decoration: none;
+    text-align: center;
+}
+.workSection-description {
+    color: #999;
+    text-align: center;
+}
+.workSection-textCenter {
+    text-align: center;
+}
+.workSection-textArea {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+.title {
+    color: #3C4858;
+    margin: 1.75rem 0 0.875rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+.cardTitle {
+    /* ...title, */
+    margin-top: 0.625rem;
+}
+
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+}
+.imgRounded {
+    border-radius: 6px !important;
+}
+.imgRoundedCircle {
+    border-radius: 50% !important;
+}
+.imgRaised {
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.imgGallery {
+    width: 100%;
+    margin-bottom: 2.142rem;
+}
+.imgCardTop {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+.imgCardBottom {
+    width: 100%;
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-bottom-right-radius: calc(.25rem - 1px);
+}
+.imgCard {
+    width: 100%;
+    border-radius: calc(.25rem - 1px);
+}
+.imgCardOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.under-header {
+    height: 150px;
+    background-color: #E5E5E5;
+}
